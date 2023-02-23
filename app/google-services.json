@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "562016096382",
+    "project_id": "pen-pals-e943d",
+    "storage_bucket": "pen-pals-e943d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562016096382:android:0822243f537d52b6f6482f",
+        "android_client_info": {
+          "package_name": "com.example.penpals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562016096382-ntf50rlfi2tmlkfd9qgjnhpndjgj3j0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuQcAFf5patVgxiDwYKMOnaCm8xV2dbm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562016096382-ntf50rlfi2tmlkfd9qgjnhpndjgj3j0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

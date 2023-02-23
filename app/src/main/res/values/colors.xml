@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Black">#FF000000</color>
+    <color name="White">#FFFFFFFF</color>
+    <color name="French_Grey">#6D7C82</color>
+    <color name="Indian_Summer_Orange">#C37A6A</color>
+    <color name="Capri_Rose">#9A6E73</color>
+    <color name="Toasted_Caramel">#F0E7D8</color>
+    <color name="Glass_Blue">#CAD5D6</color>
+    <color name="Dry_Goods">#BBB39F</color>
+    <color name="Racy_Red">#A53F5B</color>
+    <color name="Afternoon_Tea">#9E7A5B</color>
+    <color name="Peach_Medeley">#F8BC9E</color>
+    <color name="Grey">#BBC9DF</color>
+    <color name="Green">#CDE5E5</color>
+    <color name="Eggshell">#F5F4F0</color>
+    <color name="Mauve">#E0D5E6</color>
+    <color name="Pink">#E3B5Cf</color>
+    <color name="Transparent_Dry_Goods">#60BBB39F</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

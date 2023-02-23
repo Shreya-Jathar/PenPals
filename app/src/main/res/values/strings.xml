@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name"><b>Pen Pals</b></string>
+    <string name="app_motto"><b><i>New Friends\nNew Language\nNew Culture</i></b></string>
+    <string name="home_page_name"><b>Your Pals</b></string>
+    <string name="filler">List of friends will be visible here</string>
+    <string name="account">Account</string>
+    <string name="new_friend">New Friends</string>
+    <string name="login_background">Login page background</string>
+    <string name="account_page_name">My Account</string>
+    <string name="log_out">Log Out</string>
+</resources>

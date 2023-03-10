@@ -1,19 +1,18 @@
 package com.example.penpals;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+
+    FirebaseAuth mAuth;
+    FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,37 +22,36 @@ public class MainActivity extends AppCompatActivity {
         Button logIn = (Button) findViewById(R.id.logIn);
         Button signUp = (Button) findViewById(R.id.signUp);
 
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         logIn.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent i = new Intent(MainActivity.this, LoginPage.class);
-                        startActivity(i);
-                    }
+                view -> {
+                    Intent i = new Intent(MainActivity.this, LoginPage.class);
+                    startActivity(i);
                 }
         );
 
         signUp.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent i = new Intent(MainActivity.this, RegisterPage.class);
-                        startActivity(i);
-                    }
+                view -> {
+                    Intent i = new Intent(MainActivity.this, RegisterPage.class);
+                    startActivity(i);
                 }
         );
 
 
     }
 
+    @Override
     protected void onStart() {
         super.onStart();
+        currentUser = mAuth.getCurrentUser();
+        if(currentUser != null)
+            changeActivity();
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        //if (currentUser != null)
-            //reload();
+    }
+
+    private void changeActivity() {
+        Intent intent = new Intent(MainActivity.this, HomePage.class);
+        startActivity(intent);
     }
 }

@@ -37,8 +37,8 @@
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Enter Name"/>
+            android:layout_height="50dp"
+            android:hint = "Enter Name"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,9 +50,9 @@
         <EditText
             android:id="@+id/age"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:inputType="number"
-            android:contentDescription="Enter Age"/>
+            android:hint="Enter Age"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,8 +64,8 @@
         <EditText
             android:id="@+id/country"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Enter Country"/>
+            android:layout_height="50dp"
+            android:hint="Enter Country"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,21 +77,21 @@
         <EditText
             android:id="@+id/languages"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Enter Languages as Comma Separated List"/>
+            android:layout_height="50dp"
+            android:hint="Languages"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="true"
             android:textColor="@color/black"
-            android:text="Username:" />
+            android:text="Email ID:" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Enter Username"/>
+            android:layout_height="50dp"
+            android:hint="Enter Email ID"/>
 
 
         <TextView
@@ -99,14 +99,14 @@
             android:layout_height="wrap_content"
             android:textAllCaps="true"
             android:textColor="@color/black"
-            android:text="Password" />
+            android:text = "Password" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="Enter Password"
-            android:inputType="textPassword"/>
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:hint = "Enter Password"/>
 
         <Button
             android:id="@+id/register"

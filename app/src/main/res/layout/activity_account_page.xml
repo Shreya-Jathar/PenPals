@@ -28,7 +28,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/bLogOut"
+        android:id="@+id/logOut"
         app:layout_constraintTop_toBottomOf="@id/header_frame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

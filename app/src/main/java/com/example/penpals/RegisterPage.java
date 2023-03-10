@@ -1,42 +1,65 @@
 package com.example.penpals;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import java.time.ZoneId;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterPage extends AppCompatActivity {
 
-    EditText etName, etAge, etCountry, etLanguages, etUsername, etPassword;
-    Button bRegister;
+    private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
+    EditText name, age, country, languages, email, password;
+    Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
 
-        etName = (EditText) findViewById(R.id.name);
-        etAge = (EditText) findViewById(R.id.age);
-        etCountry = (EditText) findViewById(R.id.country);
-        etLanguages = (EditText) findViewById(R.id.languages);
-        etUsername = (EditText) findViewById(R.id.username);
-        etPassword = (EditText) findViewById(R.id.password);
-        bRegister = (Button) findViewById(R.id.register);
+        name = findViewById(R.id.name);
+        age = findViewById(R.id.age);
+        country = findViewById(R.id.country);
+        languages = findViewById(R.id.languages);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
+        register = findViewById(R.id.register);
 
-        bRegister.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent i = new Intent(RegisterPage.this, LoginPage.class);
-                        startActivity(i);
-                    }
-                }
+        mAuth = FirebaseAuth.getInstance();
+
+        register.setOnClickListener(
+                view -> createAccount()
         );
+    }
+
+    private void createAccount() {
+        String USN = email.getText().toString();
+        String PWD = password.getText().toString();
+
+        if(PWD.isEmpty() || PWD.length() < 8) {
+            password.setError("Password length must be at least 8 characters");
+        }
+        else {
+            mAuth.createUserWithEmailAndPassword(USN, PWD).addOnCompleteListener(task -> {
+                if(task.isSuccessful()) {
+                    mUser = mAuth.getCurrentUser();
+                    changeActivity();
+                    Toast.makeText(RegisterPage.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(RegisterPage.this, ""+task.getException(), Toast.LENGTH_SHORT).show();
+            });
+        }
+    }
+
+    private void changeActivity() {
+        Intent intent = new Intent(RegisterPage.this, HomePage.class);
+        startActivity(intent);
     }
 }

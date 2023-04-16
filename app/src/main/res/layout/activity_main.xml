@@ -46,23 +46,18 @@
         android:textAlignment="center"
         android:text="@string/app_motto"/>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginBackground"
-        android:background="@color/French_Grey">
+        app:layout_constraintTop_toBottomOf="@id/loginBackground">
 
         <Button
             android:id="@+id/signUp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
             android:background="@drawable/button_border"
             android:text="Sign Up"
             android:textColor="@color/Toasted_Caramel"
@@ -72,16 +67,15 @@
 
         <Button
             android:id="@+id/logIn"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
             android:background="@drawable/button_border"
             android:text="Log In"
             android:textColor="@color/Toasted_Caramel"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/signUp"
             app:layout_constraintRight_toRightOf="parent" />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

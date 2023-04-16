@@ -65,7 +65,9 @@
             android:id="@+id/country"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Enter Country"/>
+            android:inputType="text"
+            android:hint="Enter Country" />
+
 
         <TextView
             android:layout_width="wrap_content"

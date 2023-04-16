@@ -8,4 +8,12 @@
     <string name="login_background">Login page background</string>
     <string name="account_page_name">My Account</string>
     <string name="log_out">Log Out</string>
+    <string name="nameAttribute">Name</string>
+    <string name="nameVal">NULL</string>
+    <string name="ageAttribute">Age</string>
+    <string name="ageVal">NULL</string>
+    <string name="countryAttribute">Country</string>
+    <string name="countryVal">NULL</string>
+    <string name="nativeLanguageAttribute">Native Language</string>
+    <string name="nativeLangVal">NULL</string>
 </resources>

@@ -37,7 +37,7 @@ public class LoginPage extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(USN, PWD).addOnCompleteListener(task -> {
             if(task.isSuccessful()) {
                 changeActivity();
-                Toast.makeText(LoginPage.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginPage.this, "LogIn Successful", Toast.LENGTH_SHORT).show();
             }
             else
                 Toast.makeText(LoginPage.this, ""+task.getException(), Toast.LENGTH_SHORT).show();

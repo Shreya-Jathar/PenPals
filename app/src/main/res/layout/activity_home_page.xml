@@ -27,21 +27,15 @@
             android:text="@string/home_page_name" />
     </FrameLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.8"
         app:layout_constraintTop_toBottomOf="@id/header_frame"
-        app:layout_constraintBottom_toTopOf="@+id/footer_frame"
-        android:background="@color/Dry_Goods"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/friend1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/filler"/>
-
-    </LinearLayout>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footer_frame"/>
 
     <LinearLayout
         android:id="@+id/footer_frame"
@@ -59,7 +53,8 @@
             android:background="@color/French_Grey"
             android:layout_weight="0.5"
             android:textColor="@color/Toasted_Caramel"
-            android:text="@string/account" />
+            android:text="@string/account"
+            style="?android:attr/buttonBarButtonStyle" />
 
         <Button
             android:id="@+id/newPal"
@@ -68,6 +63,7 @@
             android:background="@color/French_Grey"
             android:layout_weight="0.5"
             android:textColor="@color/Toasted_Caramel"
-            android:text="@string/new_friend" />
+            android:text="@string/new_friend"
+            style="?android:attr/buttonBarButtonStyle" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,13 +60,13 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:text="Country:" />
-
-        <EditText
+        
+        <com.hbb20.CountryCodePicker
             android:id="@+id/country"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="text"
-            android:hint="Enter Country" />
+            app:ccp_showPhoneCode="false"
+            app:ccp_showFullName="true"/>
 
 
         <TextView

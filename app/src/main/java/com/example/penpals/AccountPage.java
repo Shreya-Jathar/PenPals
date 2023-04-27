@@ -71,7 +71,7 @@ public class AccountPage extends AppCompatActivity {
                             name.setText(task.getResult().getString("Name"));
                             age.setText(task.getResult().getString("Age"));
                             country.setText(task.getResult().getString("Country"));
-                            nativeLang.setText(task.getResult().getString("Native Language"));
+                            nativeLang.setText(task.getResult().getString("NativeLanguage"));
                         }
                         else {
                             return;

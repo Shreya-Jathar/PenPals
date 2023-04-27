@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/chatViewFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="Name of User"
+            android:textAllCaps="true"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/UserLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:text="Native Language of User"
+            android:textSize="16dp"
+            android:textStyle="italic" />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/UserLanguage"
+            android:layout_toRightOf="@id/UserLanguage"
+            android:background="@color/Racy_Red"
+            android:backgroundTint="@color/Racy_Red" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

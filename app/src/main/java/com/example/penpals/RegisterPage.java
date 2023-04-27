@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.hbb20.CountryCodePicker;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +29,8 @@ public class RegisterPage extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
-    EditText name, age, country, languages, email, password;
+    EditText name, age, languages, email, password;
+    CountryCodePicker country;
     Button register;
 
     @Override
@@ -58,8 +60,8 @@ public class RegisterPage extends AppCompatActivity {
         Map<String, Object> newUser = new HashMap<>();
         newUser.put("Name", name.getText().toString());
         newUser.put("Age", age.getText().toString());
-        newUser.put("Country", country.getText().toString());
-        newUser.put("Native Language", languages.getText().toString());
+        newUser.put("Country", country.getSelectedCountryEnglishName().toString());
+        newUser.put("NativeLanguage", languages.getText().toString());
 
         if(PWD.isEmpty() || PWD.length() < 8) {
             password.setError("Password length must be at least 8 characters");
